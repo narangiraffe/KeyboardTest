@@ -1,0 +1,104 @@
+:root {
+    --light-color: rgb(184, 199, 199);
+    --dark-color: #3B3F45;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+html {
+    font-size: 20px;
+    background-color: var(--dark-color);
+}
+
+header {
+    color: var(--light-color);
+    padding: 1rem;
+}
+
+header p {
+    text-align: center;
+}
+
+/*Keyboard styles*/
+
+.keyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+}
+
+#line-f {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.group-f {
+    display: flex;
+    flex-direction: row;
+}
+
+#line-digits {
+    display: flex;
+}
+
+/*Key styles*/
+
+.key {
+    border: 0.1rem solid black;
+    border-radius: 0.2rem;
+    background-color: var(--light-color);
+    padding: 0.2rem;
+    gap: 0.2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1rem);
+    grid-template-rows: repeat(2, 1rem);
+    width: fit-content;
+    height: fit-content;
+}
+
+.symbol {
+    grid-area: 1 / 1 / 2 / 3;
+    overflow: visible;
+}
+
+.symbol-2 {
+    grid-area: 2 / 1 / 3 / 2;
+    min-width: 100%;
+}
+
+.key-digit .symbol {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.key-digit .symbol-2 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.signal {
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 0.1rem solid black;
+    border-radius: 50%;
+    background-color: green;
+    grid-area: 2 / 2 / 3 / 3;
+    justify-self: right;
+    align-self: flex-end;
+}
+
+#backspace {
+    display: flex;
+    justify-items: right;
+    align-content: space-between;
+    height: auto;
+}
