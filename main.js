@@ -34,7 +34,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.addEventListener('keyup', (event) => {
-  const unpressedKey = event.key.toUpperCase();
-  const keySignal = document.querySelector(`.key[data-key="${unpressedKey}"]`);
+  const releasedKey = event.key.toUpperCase();
+  const keySignal = document.querySelector(`.key[data-key="${releasedKey}"]`);
   keySignal.querySelector('.signal').style.backgroundColor = '';
 });
